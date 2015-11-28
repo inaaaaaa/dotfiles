@@ -1,0 +1,8 @@
+escape ^Jj
+shell bash
+autodetach on
+defscrollback 10000
+scrollback 4000
+startup_message off
+vbell off
+caption always "%{= wc} %-w%{=bu dc}%n %t%{-}%+w %= %{=b wc}%y/%m/%d %{=b wc}%c"
