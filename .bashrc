@@ -25,7 +25,7 @@ alias t='tmux'
 ## function
 function cd() {
   _target_dir=$1
-  builtin cd ${_target_dir} && ls
+  builtin cd $_target_dir && ls
 }
 
 function fullpath() {
