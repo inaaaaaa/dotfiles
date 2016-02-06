@@ -37,6 +37,7 @@
     llvm-mode
     markdown-mode
     nginx-mode
+    php-mode
     python-mode
     racket-mode
     ruby-mode
