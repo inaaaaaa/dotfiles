@@ -39,19 +39,19 @@ function grepz() {
     grep -rni -C 2 --color=always $_word .
 }
 
-function g_checkout() {
+function g_push() {
+    branch=$(git branch | grep \* | awk '{print $2}')
+    git push origin $branch:$branch
+}
+
+function g_i_checkout() {
     git branch | awk '{print NR, $0}'
     echo "which?"
     read ans
     git checkout $(git branch | sed 's/\*//' | awk '{print $1}' | sed -n "$ans,1p")
 }
 
-function g_push() {
-    branch=$(git branch | grep * | awk '{print $2}')
-    git push origin $branch:$branch
-}
-
-function g_add() {
+function g_i_add() {
     git status --short
     files=$(git status --short | awk '{print $2}')
     for f in $files; do
