@@ -39,6 +39,13 @@ function grepz() {
   grep -rni -C 2 --color=always $_target_word .
 }
 
+function g_checkout() {
+    git branch | awk '{print NR, $0}'
+    echo "which?"
+    read ans
+    git checkout $(git branch | sed 's/\*//' | awk '{print $1}' | sed -n "$ans,1p")
+}
+
 ## history
 export HISTSIZE=100000
 export HISTFILESIZE=100000
