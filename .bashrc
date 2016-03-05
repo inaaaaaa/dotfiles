@@ -46,6 +46,11 @@ function g_checkout() {
     git checkout $(git branch | sed 's/\*//' | awk '{print $1}' | sed -n "$ans,1p")
 }
 
+function g_push() {
+    branch=$(git branch | grep * | awk '{print $2}')
+    git push origin $branch:$branch
+}
+
 ## history
 export HISTSIZE=100000
 export HISTFILESIZE=100000
