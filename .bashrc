@@ -21,7 +21,7 @@ alias mv='mv -i'
 alias rm='rm -i'
 alias cp='cp -i'
 alias t='tmux'
-alias g='git branch; git status --short'
+alias g='git branch && git status --short'
 
 ## function
 function cd() {
