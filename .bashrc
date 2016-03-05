@@ -1,5 +1,5 @@
 ## prompt
-# (cyan, white) = (36, 37)
+# (cyan, white, yellow, red) = (36, 37, 33, 31)
 _ps_color=37
 export PS1="\[\033[1;${_ps_color}m\][\t]\u@\h:\w\[\033[0m\]\n$ "
 
@@ -49,6 +49,19 @@ function g_checkout() {
 function g_push() {
     branch=$(git branch | grep * | awk '{print $2}')
     git push origin $branch:$branch
+}
+
+function g_add() {
+    git status --short
+    files=$(git status --short | awk '{print $2}')
+    for f in $files; do
+        echo "add? : $f [y/N]"
+        read ans
+        if [ "$ans" = "y" ]; then
+            git add $f
+        fi
+    done
+    git status --short
 }
 
 ## history
