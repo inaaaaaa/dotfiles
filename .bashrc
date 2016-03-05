@@ -9,7 +9,7 @@ export PS1="\[\033[1;${_ps_color}m\][\t]\u@\h:\w\[\033[0m\]\n$ "
 ## alias
 _ls_color="--color"
 if [ $(uname) == 'Darwin' ]; then
-   _ls_color="-G"
+    _ls_color="-G"
 fi
 alias em='emacs'
 alias e='emacsclient --no-wait'
@@ -25,18 +25,18 @@ alias g='git branch; git status --short'
 
 ## function
 function cd() {
-  _target_dir=$1
-  builtin cd $_target_dir && ls
+    _dir=$1
+    builtin cd $_dir && ls
 }
 
 function fullpath() {
-  _target_file=$1
-  echo "$(pwd)/${_target_file}"
+    _file=$1
+    echo "$(pwd)/${_file}"
 }
 
 function grepz() {
-  _target_word=$1
-  grep -rni -C 2 --color=always $_target_word .
+    _word=$1
+    grep -rni -C 2 --color=always $_word .
 }
 
 function g_checkout() {
