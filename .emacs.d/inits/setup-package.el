@@ -1,11 +1,14 @@
+;; server
 (require 'server)
 (unless (server-running-p)
   (server-start))
 
+;; linum
 (require 'linum)
 (global-linum-mode)
 (setq linum-format "%4d ")
 
+;; view
 (require 'view)
 (global-set-key (kbd "C-z") 'view-mode)
 (define-key view-mode-map (kbd "q") 'view-mode) ; quit from view-mode
@@ -17,10 +20,10 @@
 (define-key view-mode-map (kbd "f") 'scroll-up-command)
 (define-key view-mode-map (kbd "b") 'scroll-down-command)
 
-; haskell-mode
+;; haskell
 (add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
 
-; auto-complete
+;; auto-complete
 (ac-config-default)
 (add-to-list 'ac-modes 'haskell-mode)
 (add-to-list 'ac-modes 'ruby-mode)
@@ -34,10 +37,9 @@
 (add-to-list 'ac-modes 'sh-mode)
 (setq ac-use-menu-map t)
 
-; markdown-mode
+;; markdown
 (autoload 'markdown-mode "markdown-mode"
   "Major mode for editing Markdown files" t)
 (add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.txt\\'" . markdown-mode))
-(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))

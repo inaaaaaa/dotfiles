@@ -1,8 +1,8 @@
-; indent
+;; indent
 (setq-default indent-tabs-mode t)
 (setq-default tab-width 4)
 
-; do not use tab
+;; do not use tab
 (setq-default indent-tabs-mode nil)
 
 (setq make-backup-files nil)

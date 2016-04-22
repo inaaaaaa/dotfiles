@@ -1,4 +1,6 @@
-;;;; copy from http://d.hatena.ne.jp/khiker/20100119/window_resize and some modify
+;;
+;; copy from http://d.hatena.ne.jp/khiker/20100119/window_resize
+;;
 
 (defun window-resizer ()
   "Control window size and position."
@@ -37,8 +39,6 @@
 
 (global-set-key (kbd "C-x w") 'window-resizer)
 
-;;;
-
 (defun window-resize-num4 ()
   (interactive)
   (delete-other-windows)
@@ -47,49 +47,3 @@
   )
 
 (global-set-key (kbd "C-x 4") 'window-resize-num4)
-
-(defun window-resize-num5 ()
-  (interactive)
-  (delete-other-windows)
-  (split-window-right)
-  (shrink-window 60 t)
-  (other-window 1)
-  (split-window-below)
-  (other-window 2)
-  )
-
-(global-set-key (kbd "C-x 5") 'window-resize-num5)
-
-(defun window-resize-num6 ()
-  (interactive)
-  (delete-other-windows)
-  (split-window-right)
-  (split-window-right)
-  (split-window-below)
-  (other-window 2)
-  (split-window-below)
-  (other-window 2)
-  (split-window-right)
-  (split-window-below)
-  (other-window 2)
-  (split-window-below)
-  (other-window 2)
-  )
-
-(global-set-key (kbd "C-x 6") 'window-resize-num6)
-
-(defun window-resize-num7 ()
-  (interactive)
-  (delete-other-windows)
-  (split-window-right)
-  (other-window 1)
-  (split-window-below)
-  (other-window 1)
-  (split-window-right)
-  (split-window-below)
-  (split-window-right)
-  (split-window-below)
-  (split-window-right)
-  )
-
-(global-set-key (kbd "C-x 7") 'window-resize-num7)
