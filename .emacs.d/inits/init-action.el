@@ -17,7 +17,7 @@
   (insert "# -*- coding: utf-8 -*-\n")
   (insert "\n")
   (insert "if __name__ == '__main__':\n")
-  (insert "    print('hello')"))
+  (insert "    print('hello')\n"))
 
 ;; main
 (fset 'counter (make-counter))
