@@ -1,29 +1,32 @@
-## prompt
-# (cyan, white, yellow, red) = (36, 37, 33, 31)
-_ps_color=37
-export PS1="\[\033[1;${_ps_color}m\][\t]\u@\h:\w\[\033[0m\]\n$ "
+# prompt
+export PS1="\[\033[1;37m\][\t]\u@\h:\w\[\033[0m\]\n$ " # white(37)
 
-## path
+# path
 export PATH=${HOME}/bin:${HOME}/local/bin:${PATH}
 
-## alias
-_ls_color="--color"
+# alias
 if [ $(uname) == 'Darwin' ]; then
-    _ls_color="-G"
+    alias l="ls -FG"
+    alias ls="ls -FG"
+    alias la="ls -FGa"
+    alias ll="ls -FGl"
+    alias lla="ls -FGal"
+else
+    alias l="ls -F --color"
+    alias ls="ls -F --color"
+    alias la="ls -Fa --color"
+    alias ll="ls -Fl --color"
+    alias lla="ls -Fal --color"
 fi
 alias em='emacs'
 alias e='emacsclient --no-wait'
-alias l="ls -F ${_ls_color}"
-alias ls="ls -F ${_ls_color}"
-alias la="ls -aF ${_ls_color}"
-alias ll="ls -lF ${_ls_color}"
 alias mv='mv -i'
 alias rm='rm -i'
 alias cp='cp -i'
 alias t='tmux'
 alias g='git branch && git status --short'
 
-## function
+# function
 function cd() {
     _dir=$1
     builtin cd $_dir && ls
@@ -51,11 +54,11 @@ function g_checkout_i() {
     git checkout $(git branch | sed 's/\*//' | awk '{print $1}' | sed -n "$ans,1p")
 }
 
-## history
+# history
 export HISTSIZE=100000
 export HISTFILESIZE=100000
 export HISTCONTROL=ignoredups
 export HISTTIMEFORMAT='%F %T  '
 
-## read local settings
+# read local settings
 test -r ~/.bashrc.local && . ~/.bashrc.local
