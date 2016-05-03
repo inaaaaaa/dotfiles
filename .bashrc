@@ -4,7 +4,7 @@ _ps_color=37
 export PS1="\[\033[1;${_ps_color}m\][\t]\u@\h:\w\[\033[0m\]\n$ "
 
 ## path
-#export PATH=${HOME}/local/bin:${PATH}
+export PATH=${HOME}/bin:${PATH}
 
 ## alias
 _ls_color="--color"
@@ -49,19 +49,6 @@ function g_checkout_i() {
     echo "which?"
     read ans
     git checkout $(git branch | sed 's/\*//' | awk '{print $1}' | sed -n "$ans,1p")
-}
-
-function g_add_i() {
-    git status --short
-    files=$(git status --short | awk '{print $2}')
-    for f in $files; do
-        echo "add? : $f [y/N]"
-        read ans
-        if [ "$ans" = "y" ]; then
-            git add $f
-        fi
-    done
-    git status --short
 }
 
 ## history
