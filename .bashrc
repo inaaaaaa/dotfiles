@@ -4,7 +4,7 @@ _ps_color=37
 export PS1="\[\033[1;${_ps_color}m\][\t]\u@\h:\w\[\033[0m\]\n$ "
 
 ## path
-export PATH=${HOME}/bin:${PATH}
+export PATH=${HOME}/bin:${HOME}/local/bin:${PATH}
 
 ## alias
 _ls_color="--color"
