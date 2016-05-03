@@ -32,7 +32,7 @@ function cd() {
     builtin cd $1 && ls
 }
 
-function ls_my_commands() {
+function ls_mycommands() {
     if [ -e ${HOME}/bin ]; then
         echo "${HOME}/bin"
         ls ${HOME}/bin/
