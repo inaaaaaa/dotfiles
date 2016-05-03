@@ -33,11 +33,6 @@ function cd() {
     builtin cd $dir && ls
 }
 
-function grepz() {
-    word=$1
-    grep --context=2 --color=always --ignore-case --line-number --recursive $word .
-}
-
 function ls_my_commands() {
     if [ -e ${HOME}/bin ]; then
         echo "${HOME}/bin"

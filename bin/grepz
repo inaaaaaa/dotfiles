@@ -1,0 +1,4 @@
+#!/bin/bash
+
+word=$1
+grep --context=2 --color=always --ignore-case --line-number --recursive $word .
