@@ -5,20 +5,19 @@
 ;; do not use tab
 (setq-default indent-tabs-mode nil)
 
+;; backup-file
 (setq make-backup-files nil)
 (setq auto-save-default nil)
 
+;; startup-message
 (setq inhibit-startup-message t)
 
+;; other
 (setq scroll-conservatively 1)
-
 (show-paren-mode)
-
 (setq transient-mark-mode t)
-
 (setq hl-line-face 'underline)
 (global-hl-line-mode)
-
 (line-number-mode t)
 (column-number-mode t)
 
