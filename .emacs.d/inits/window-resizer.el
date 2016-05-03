@@ -37,13 +37,12 @@
                (message "Quit")
                (throw 'end-flag t)))))))
 
-(global-set-key (kbd "C-x w") 'window-resizer)
-
-(defun window-resize-num4 ()
+(defun window-resize-4 ()
   (interactive)
   (delete-other-windows)
   (split-window-right)
-  (shrink-window 60 t)
-  )
+  (shrink-window 60 t))
 
-(global-set-key (kbd "C-x 4") 'window-resize-num4)
+;; keybind
+(global-set-key (kbd "C-x w") 'window-resizer)
+(global-set-key (kbd "C-x 4") 'window-resize-4)
