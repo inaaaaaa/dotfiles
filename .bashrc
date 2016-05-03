@@ -38,13 +38,6 @@ function grepz() {
     grep --context=2 --color=always --ignore-case --line-number --recursive $word .
 }
 
-function g_checkout_i() {
-    git branch | awk '{print NR, $0}'
-    echo "which?"
-    read ans
-    git checkout $(git branch | sed 's/\*//' | awk '{print $1}' | sed -n "$ans,1p")
-}
-
 function ls_my_commands() {
     if [ -e ${HOME}/bin ]; then
         echo "${HOME}/bin"
