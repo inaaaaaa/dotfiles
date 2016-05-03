@@ -5,6 +5,14 @@ export PS1="\[\033[1;37m\][\t]\u@\h:\w\[\033[0m\]\n$ " # white(37)
 export PATH=${HOME}/bin:${HOME}/local/bin:${PATH}
 
 # alias
+alias cp='cp -i'
+alias e='emacsclient --no-wait'
+alias em='emacs'
+alias g='git branch && git status --short'
+alias mv='mv -i'
+alias rm='rm -i'
+alias t='tmux'
+
 if [ $(uname) == 'Darwin' ]; then
     alias l='ls -FG'
     alias la='ls -FGa'
@@ -18,14 +26,6 @@ else
     alias ls='ls -F --color'
     alias lla='ls -Fal --color'
 fi
-
-alias cp='cp -i'
-alias e='emacsclient --no-wait'
-alias em='emacs'
-alias g='git branch && git status --short'
-alias mv='mv -i'
-alias rm='rm -i'
-alias t='tmux'
 
 # function
 function cd() {
