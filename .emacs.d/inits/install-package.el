@@ -24,6 +24,7 @@
     ac-python
     auto-complete
     auto-install
+    clojure-mode
     cmake-mode
     csv-mode
     gitignore-mode
