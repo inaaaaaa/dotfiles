@@ -38,11 +38,6 @@ function grepz() {
     grep --context=2 --color=always --ignore-case --line-number --recursive $word .
 }
 
-function g_push() {
-    branch=$(git branch | grep \* | awk '{print $2}')
-    git push origin $branch:$branch
-}
-
 function g_checkout_i() {
     git branch | awk '{print NR, $0}'
     echo "which?"
