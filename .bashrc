@@ -6,40 +6,36 @@ export PATH=${HOME}/bin:${HOME}/local/bin:${PATH}
 
 # alias
 if [ $(uname) == 'Darwin' ]; then
-    alias l="ls -FG"
-    alias ls="ls -FG"
-    alias la="ls -FGa"
-    alias ll="ls -FGl"
-    alias lla="ls -FGal"
+    alias l='ls -FG'
+    alias la='ls -FGa'
+    alias ll='ls -FGl'
+    alias ls='ls -FG'
+    alias lla='ls -FGal'
 else
-    alias l="ls -F --color"
-    alias ls="ls -F --color"
-    alias la="ls -Fa --color"
-    alias ll="ls -Fl --color"
-    alias lla="ls -Fal --color"
+    alias l='ls -F --color'
+    alias la='ls -Fa --color'
+    alias ll='ls -Fl --color'
+    alias ls='ls -F --color'
+    alias lla='ls -Fal --color'
 fi
-alias em='emacs'
+
+alias cp='cp -i'
 alias e='emacsclient --no-wait'
+alias em='emacs'
+alias g='git branch && git status --short'
 alias mv='mv -i'
 alias rm='rm -i'
-alias cp='cp -i'
 alias t='tmux'
-alias g='git branch && git status --short'
 
 # function
 function cd() {
-    _dir=$1
-    builtin cd $_dir && ls
-}
-
-function fullpath() {
-    _file=$1
-    echo "$(pwd)/${_file}"
+    dir=$1
+    builtin cd $dir && ls
 }
 
 function grepz() {
-    _word=$1
-    grep -rni -C 2 --color=always $_word .
+    word=$1
+    grep --context=2 --color=always --ignore-case --line-number --recursive $word .
 }
 
 function g_push() {
@@ -52,6 +48,23 @@ function g_checkout_i() {
     echo "which?"
     read ans
     git checkout $(git branch | sed 's/\*//' | awk '{print $1}' | sed -n "$ans,1p")
+}
+
+function ls_my_commands() {
+    if [ -e ${HOME}/bin ]; then
+        echo "${HOME}/bin"
+        ls ${HOME}/bin/
+        echo ""
+    else
+        echo "${HOME}/bin doesn't exist."
+    fi
+    if [ -e ${HOME}/local/bin ]; then
+        echo "${HOME}/local/bin"
+        ls ${HOME}/local/bin/
+        echo ""
+    else
+        echo "${HOME}/local/bin doesn't exist."
+    fi
 }
 
 # history
