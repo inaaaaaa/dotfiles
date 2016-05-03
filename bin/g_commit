@@ -1,0 +1,6 @@
+#!/bin/bash
+
+git status
+echo "Please enter the commit message for your changes."
+read message
+git commit -m "${message}"
