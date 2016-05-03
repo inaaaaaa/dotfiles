@@ -29,8 +29,7 @@ fi
 
 # function
 function cd() {
-    dir=$1
-    builtin cd $dir && ls
+    builtin cd $1 && ls
 }
 
 function ls_my_commands() {
