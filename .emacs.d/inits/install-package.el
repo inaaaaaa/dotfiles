@@ -29,6 +29,7 @@
     csv-mode
     gitignore-mode
     gnuplot-mode
+    go-mode
     graphviz-dot-mode
     haskell-mode
     helm
