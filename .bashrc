@@ -32,23 +32,6 @@ function cd() {
     builtin cd $1 && ls
 }
 
-function ls_mycommands() {
-    if [ -e ${HOME}/bin ]; then
-        echo "${HOME}/bin"
-        ls ${HOME}/bin/
-        echo ""
-    else
-        echo "${HOME}/bin doesn't exist."
-    fi
-    if [ -e ${HOME}/local/bin ]; then
-        echo "${HOME}/local/bin"
-        ls ${HOME}/local/bin/
-        echo ""
-    else
-        echo "${HOME}/local/bin doesn't exist."
-    fi
-}
-
 # history
 export HISTSIZE=100000
 export HISTFILESIZE=100000
