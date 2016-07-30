@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# ln
 ln -is  $(pwd)/.bash_profile ~/.bash_profile
 ln -is  $(pwd)/.bashrc       ~/.bashrc
 ln -is  $(pwd)/.gitconfig    ~/.gitconfig
@@ -10,8 +9,8 @@ ln -is  $(pwd)/.vimrc        ~/.vimrc
 ln -his $(pwd)/.emacs.d      ~/.emacs.d
 ln -his $(pwd)/bin           ~/bin
 
-# prompt's color
-echo -e "\nPlease choose color of prompt."
+echo ""
+echo "Please choose color of prompt."
 echo "  white, cyan, red or yellow. (default: white)"
 read color
 case "$color" in
