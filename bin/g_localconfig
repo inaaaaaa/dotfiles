@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo '# before'
+git config --local user.name
+git config --local user.email
+
+git config --local user.name inazo1115
+git config --local user.email inaba1115@gmail.com
+
+echo '# after'
+git config --local user.name
+git config --local user.email
