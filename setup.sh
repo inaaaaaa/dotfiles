@@ -6,8 +6,14 @@ ln -is  $(pwd)/.gitconfig    ~/.gitconfig
 ln -is  $(pwd)/.screenrc     ~/.screenrc
 ln -is  $(pwd)/.tmux.conf    ~/.tmux.conf
 ln -is  $(pwd)/.vimrc        ~/.vimrc
-ln -his $(pwd)/.emacs.d      ~/.emacs.d
-ln -his $(pwd)/bin           ~/bin
+
+if [ $(uname) == 'Darwin' ]; then
+    ln -his $(pwd)/.emacs.d ~/.emacs.d
+    ln -his $(pwd)/bin      ~/bin
+else
+    ln -is $(pwd)/.emacs.d ~/.emacs.d
+    ln -is $(pwd)/bin      ~/bin
+fi
 
 echo ""
 echo "Please choose color of prompt."
