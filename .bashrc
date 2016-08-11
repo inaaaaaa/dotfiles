@@ -16,13 +16,13 @@ alias e='emacsclient --no-wait'
 if [ $(uname) == 'Darwin' ]; then
     alias l='ls -F -G'
     alias ls='ls -F -G'
+    alias la='ls -Fa -G'
     alias ll='ls -Fl -G'
-    alias la='ls -Fla -G'
 else
     alias l='ls -F --color'
     alias ls='ls -F --color'
+    alias la='ls -Fa --color'
     alias ll='ls -Fl --color'
-    alias la='ls -Fla --color'
 fi
 
 function cd() {
