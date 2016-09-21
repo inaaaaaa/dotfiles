@@ -25,4 +25,4 @@ case "$color" in
     "yellow" ) echo "You chose yellow." ; color=33 ;;
     *        ) echo "You chose white."  ; color=37 ;;
 esac
-echo "export PS1=\"\[\033[1;${color}m\][\t]\u@\h:\w\[\033[0m\]\n$ \"" >> ~/.bashrc.local
+echo "export PS1=\"\[\033[1;${color}m\][\t]\u@\h:\w:\\\$?\[\033[0m\]\n$ \"" >> ~/.bashrc.local
