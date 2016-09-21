@@ -1,5 +1,6 @@
 export PS1="\[\033[1;37m\][\t]\u@\h:\w\[\033[0m\]\n$ " # white(37)
 export PATH=${HOME}/bin:${HOME}/local/bin:${PATH}
+
 export HISTSIZE=100000
 export HISTFILESIZE=100000
 export HISTCONTROL=ignoredups
@@ -12,6 +13,7 @@ alias t='tmux'
 alias g='git branch && git status --short'
 alias em='emacs'
 alias e='emacsclient --no-wait'
+alias z='echo $?'
 
 if [ $(uname) == 'Darwin' ]; then
     alias l='ls -F -G'
