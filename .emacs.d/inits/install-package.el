@@ -43,7 +43,6 @@
     python-mode
     racket-mode
     ruby-mode
-    scala-mode2
     ssh-config-mode
     vimrc-mode
     w3m
