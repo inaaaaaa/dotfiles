@@ -10,7 +10,7 @@ function map() {
 }
 
 function usage() {
-    echo 'Usage example: map "* 10" 1>&2'
+    echo 'Usage example: echo 1 2 | map "* 10"' 1>&2
     exit 1
 }
 
