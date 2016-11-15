@@ -1,0 +1,46 @@
+#!/bin/bash
+
+function sum() {
+    local sum=0
+    for i in $(cat -)
+    do
+        sum=$((sum + i))
+    done
+    echo $sum
+}
+
+function mul() {
+    local mul=1
+    for i in $(cat -)
+    do
+        mul=$((mul * i))
+    done
+    echo $mul
+}
+
+function avg() {
+    local n=0
+    local sum=0
+    for i in $(cat -)
+    do
+        n=$((n + 1))
+        sum=$((sum + i))
+    done
+    echo "scale=4; ${sum}/${n}" | bc
+}
+
+function usage() {
+    echo "Usage: calc (sum|mul|avg)" 1>&2
+    exit 1
+}
+
+# main
+[ $# -ne 1 ] && usage
+[ $1 != 'sum' -a $1 != 'avg' -a $1 != 'mul' ] && usage
+
+if [ -p /dev/stdin ]
+then
+    cat -
+else
+    echo $@
+fi | $1
