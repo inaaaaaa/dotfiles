@@ -1,0 +1,25 @@
+#!/bin/bash
+set -efu
+
+function map() {
+    fn=$@
+    for i in $(cat -)
+    do
+        echo "${i} ${fn}" | bc
+    done
+}
+
+function usage() {
+    echo 'Usage example: map "* 10" 1>&2'
+    exit 1
+}
+
+# main
+[ $# -ne 1 ] && usage
+
+if [ -p /dev/stdin ]
+then
+    cat -
+else
+    echo $@
+fi | map $1
