@@ -36,7 +36,7 @@ function usage() {
 
 # main
 [ $# -ne 1 ] && usage
-[ $1 != 'sum' -a $1 != 'avg' -a $1 != 'mul' ] && usage
+[ $1 != 'sum' -a $1 != 'mul' -a $1 != 'avg' ] && usage
 
 if [ -p /dev/stdin ]
 then
