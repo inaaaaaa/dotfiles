@@ -13,7 +13,6 @@ alias t='tmux'
 alias g='git branch && git status --short'
 alias em='emacs'
 alias e='emacsclient --no-wait'
-alias z='echo $?'
 
 if [ $(uname) == 'Darwin' ]; then
     alias l='ls -F -G'
