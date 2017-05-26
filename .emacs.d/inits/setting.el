@@ -12,7 +12,7 @@
 ;; startup-message
 (setq inhibit-startup-message t)
 
-;; other
+;; others
 (setq scroll-conservatively 1)
 (show-paren-mode)
 (setq transient-mark-mode t)

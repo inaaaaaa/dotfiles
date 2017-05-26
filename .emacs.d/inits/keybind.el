@@ -9,7 +9,7 @@
 (global-set-key (kbd "M-?") 'describe-mode)
 
 ;; C-x
-(global-set-key (kbd "C-x b") 'helm-buffers-list)
+(global-set-key (kbd "C-x b") 'buffer-menu)
 (global-set-key (kbd "C-x C-b") 'buffer-menu)
 (global-set-key (kbd "C-x d") 'list-directory)
 (global-set-key (kbd "C-x C-d") 'list-directory)
