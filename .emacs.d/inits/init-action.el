@@ -10,6 +10,11 @@
           ((eq (% x 2) 1) (load-theme 'tsdh-dark t))
           (t "error"))))
 
+;; date
+(defun date ()
+  (interactive)
+  (s-chomp (shell-command-to-string "date")))
+
 ;; skeleton-py
 (defun skeleton-py ()
   (interactive)
