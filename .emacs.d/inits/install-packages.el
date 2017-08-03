@@ -17,6 +17,7 @@
     clojure-mode
     cmake-mode
     csv-mode
+    erlang
     f
     gitignore-mode
     gnuplot-mode
@@ -35,6 +36,7 @@
     racket-mode
     ruby-mode
     s
+    scala-mode
     ssh-config-mode
     vimrc-mode
     w3m
