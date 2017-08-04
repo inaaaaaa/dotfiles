@@ -5,7 +5,6 @@ ln -is  $(pwd)/.bashrc       ~/.bashrc
 ln -is  $(pwd)/.gitconfig    ~/.gitconfig
 ln -is  $(pwd)/.screenrc     ~/.screenrc
 ln -is  $(pwd)/.tmux.conf    ~/.tmux.conf
-ln -is  $(pwd)/.vimrc        ~/.vimrc
 
 if [ $(uname) == 'Darwin' ]; then
     ln -his $(pwd)/.emacs.d ~/.emacs.d
