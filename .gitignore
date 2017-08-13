@@ -1,7 +1,7 @@
 # emacs
 .emacs.d
 !.emacs.d/init.el
-!.emacs.d/inits
+!.emacs.d/settings
 
 # other
 .DS_Store
