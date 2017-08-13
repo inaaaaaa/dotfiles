@@ -47,8 +47,13 @@
     (package-refresh-contents)
     (package-install package)))
 
-;; Settings
+;; pwd
 (defconst pwd (file-name-directory load-file-name))
+
+;; Submodules(self-package)
+(load (concat pwd "submodules/window-resizer/window-resizer.el"))
+
+;; Settings
 (load (concat pwd "settings/setup-package.el"))
 (load (concat pwd "settings/setting.el"))
 (load (concat pwd "settings/keybind.el"))
@@ -56,6 +61,10 @@
 ;; Init actions
 (load-theme 'tsdh-dark)
 (buffer-menu)
+
+
+
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

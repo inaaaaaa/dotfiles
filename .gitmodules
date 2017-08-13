@@ -1,0 +1,3 @@
+[submodule ".emacs.d/submodules/window-resizer"]
+	path = .emacs.d/submodules/window-resizer
+	url = https://github.com/inazo1115/window-resizer

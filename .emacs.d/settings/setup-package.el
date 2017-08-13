@@ -1,3 +1,5 @@
+;;; elpa
+
 ;; server
 (require 'server)
 (unless (server-running-p)
@@ -47,3 +49,9 @@
 ;; others
 (require 'f)
 (require 's)
+
+;;; submodules
+
+;; window-resizer
+(require 'window-resizer)
+(global-set-key (kbd "C-x w") 'window-resizer-do)
