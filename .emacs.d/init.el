@@ -7,7 +7,6 @@
 (load "${HOME}/.emacs.d/inits/setup-package.el")
 (load "${HOME}/.emacs.d/inits/setting.el")
 (load "${HOME}/.emacs.d/inits/keybind.el")
-(load "${HOME}/.emacs.d/inits/window-resizer.el")
 (load "${HOME}/.emacs.d/inits/init-action.el")
 (custom-set-variables
  ;; custom-set-variables was added by Custom.

@@ -19,6 +19,7 @@
     csv-mode
     erlang
     f
+    flycheck
     gitignore-mode
     gnuplot-mode
     go-mode
@@ -31,6 +32,7 @@
     llvm-mode
     markdown-mode
     nginx-mode
+    package-lint
     php-mode
     python-mode
     racket-mode
