@@ -50,8 +50,9 @@
 ;; pwd
 (defconst pwd (file-name-directory load-file-name))
 
-;; Submodules(self-package)
+;; Submodules
 (load (concat pwd "submodules/window-resizer/window-resizer.el"))
+(load (concat pwd "submodules/skelton/skelton.el"))
 
 ;; Settings
 (load (concat pwd "settings/setup-package.el"))
@@ -62,8 +63,7 @@
 (load-theme 'tsdh-dark)
 (buffer-menu)
 
-
-
+;;;;;;;;
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
