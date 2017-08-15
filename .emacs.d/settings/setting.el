@@ -1,8 +1,6 @@
 ;; indent
 (setq-default indent-tabs-mode t)
 (setq-default tab-width 4)
-
-;; do not use tab
 (setq-default indent-tabs-mode nil)
 
 ;; backup-file
@@ -14,10 +12,7 @@
 
 ;; others
 (setq scroll-conservatively 1)
-(show-paren-mode)
-(setq transient-mark-mode t)
-(setq hl-line-face 'underline)
-(global-hl-line-mode)
+(show-paren-mode t)
 (line-number-mode t)
 (column-number-mode t)
 

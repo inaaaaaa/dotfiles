@@ -13,7 +13,7 @@
 ;; view
 (require 'view)
 (global-set-key (kbd "C-z") 'view-mode)
-(define-key view-mode-map (kbd "q") 'view-mode) ; quit from view-mode
+(define-key view-mode-map (kbd "q") 'view-mode)
 (define-key view-mode-map (kbd "e") 'View-scroll-line-forward)
 (define-key view-mode-map (kbd "j") 'View-scroll-line-forward)
 (define-key view-mode-map (kbd "k") 'View-scroll-line-backward)
