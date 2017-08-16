@@ -24,7 +24,7 @@
 (global-set-key (kbd "C-v") 'scroll-up-command)
 (global-set-key (kbd "C-b") 'backward-char)
 (global-set-key (kbd "C-n") 'next-line)
-(global-set-key (kbd "C-m") 'execute-extended-command)
+(global-set-key (kbd "C-m") 'helm-M-x)
 
 ;; M-
 (global-set-key (kbd "M-g") 'goto-line)
