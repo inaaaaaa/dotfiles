@@ -12,9 +12,11 @@
     ac-python
     auto-complete
     auto-install
+    beacon
     clojure-mode
     cmake-mode
     csv-mode
+    cyberpunk-theme
     erlang
     f
     flycheck
@@ -60,7 +62,7 @@
 (load (concat pwd "settings/keybind.el"))
 
 ;; Init actions
-(load-theme 'tsdh-dark)
+(load-theme 'cyberpunk t)
 (buffer-menu)
 
 ;;;;;;;;
@@ -70,6 +72,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   (quote
+    ("d6922c974e8a78378eacb01414183ce32bc8dbf2de78aabcc6ad8172547cb074" default)))
  '(package-selected-packages
    (quote
     (yaml-mode w3m vimrc-mode ssh-config-mode scala-mode racket-mode python-mode php-mode package-lint nginx-mode markdown-mode llvm-mode json-mode js3-mode jinja2-mode graphviz-dot-mode go-mode gnuplot-mode gitignore-mode flycheck erlang csv-mode cmake-mode clojure-mode auto-install ac-python ac-html-bootstrap ac-html ac-helm ac-haskell-process))))
