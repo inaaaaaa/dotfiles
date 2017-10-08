@@ -17,12 +17,14 @@
     cmake-mode
     csv-mode
     cyberpunk-theme
+    elixir-mode
     erlang
     f
     flycheck
     gitignore-mode
     gnuplot-mode
     go-mode
+    gradle-mode
     graphviz-dot-mode
     haskell-mode
     helm
