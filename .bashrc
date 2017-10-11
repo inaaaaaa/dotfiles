@@ -14,7 +14,8 @@ alias g='git branch && git status --short'
 alias em='emacs'
 alias e='emacsclient --no-wait'
 
-if [ $(uname) == 'Darwin' ]; then
+if [ $(uname) == 'Darwin' ]
+then
     alias l='ls -F -G'
     alias ls='ls -F -G'
     alias la='ls -Fa -G'
