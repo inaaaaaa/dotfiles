@@ -39,9 +39,11 @@
     python-mode
     racket-mode
     ruby-mode
+    rust-mode
     s
     scala-mode
     ssh-config-mode
+    toml-mode
     vimrc-mode
     w3m
     yaml-mode))
