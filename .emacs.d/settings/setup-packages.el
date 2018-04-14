@@ -22,12 +22,9 @@
 (define-key view-mode-map (kbd "f") 'scroll-up-command)
 (define-key view-mode-map (kbd "b") 'scroll-down-command)
 
-;; haskell
-(add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
-
 ;; auto-complete
+(require 'auto-complete)
 (ac-config-default)
-(add-to-list 'ac-modes 'haskell-mode)
 (add-to-list 'ac-modes 'ruby-mode)
 (add-to-list 'ac-modes 'css-mode)
 (add-to-list 'ac-modes 'c-mode)
@@ -49,9 +46,3 @@
 ;; others
 (require 'f)
 (require 's)
-
-;;; submodules
-
-;; window-resizer
-(require 'window-resizer)
-(global-set-key (kbd "C-x w") 'window-resizer-do)

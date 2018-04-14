@@ -1,8 +1,6 @@
-# emacs
 .emacs.d/*
+!.emacs.d/custom.el
 !.emacs.d/init.el
 !.emacs.d/settings
-!.emacs.d/submodules
-
-# other
+!.emacs.d/snippets
 .DS_Store
