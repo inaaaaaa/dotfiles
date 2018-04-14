@@ -1,14 +1,13 @@
 #!/bin/bash
 
 function usage() {
-    echo 'Usage: grepz <word> <path>'
+    echo 'usage: grepz <word> <path>'
     exit 1
 }
 
-if [ "$#" -ne 2 ]; then
-    usage
-fi
+[ "$#" -ne 2 ] && usage
+WORD=$1
+PATH_=$2
 
-word=$1
-path=$2
-grep --context=2 --color=always --ignore-case --line-number --recursive $word $path
+grep --context=2 --color=always --ignore-case \
+     --line-number --recursive $WORD $PATH_
