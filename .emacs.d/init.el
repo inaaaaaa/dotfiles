@@ -26,6 +26,7 @@
     package-lint
     php-mode
     python-mode
+    quelpa
     ruby-mode
     rust-mode
     s
@@ -36,6 +37,8 @@
   (unless (package-installed-p package)
     (package-refresh-contents)
     (package-install package)))
+
+(quelpa '(window-resizer :repo "inat/window-resizer" :fetcher github))
 
 ;;
 ;; load files

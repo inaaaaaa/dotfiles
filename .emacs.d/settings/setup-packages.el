@@ -1,5 +1,3 @@
-;;; elpa
-
 ;; server
 (require 'server)
 (unless (server-running-p)
@@ -36,13 +34,13 @@
 (add-to-list 'ac-modes 'sh-mode)
 (setq ac-use-menu-map t)
 
-;; markdown
-(add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
-(add-to-list 'auto-mode-alist '("\\.txt\\'" . markdown-mode))
-
 ;; beacon
 (beacon-mode t)
 
-;; others
+;; misc
 (require 'f)
 (require 's)
+
+;; window-resizer
+(require 'window-resizer)
+(global-set-key (kbd "C-x w") 'window-resizer-do)
