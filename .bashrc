@@ -1,5 +1,5 @@
-export PS1="\[\033[1;37m\][\t]\u@\h:\w:\$?\[\033[0m\]\n$ " # white(37)
-export PATH=${HOME}/bin:${HOME}/local/bin:${PATH}
+export PS1="\[\033[1;36m\][\t]:\w:$?\[\033[0m\]\n$ "
+export PATH=${HOME}/bin:${PATH}
 
 export HISTSIZE=100000
 export HISTFILESIZE=100000
