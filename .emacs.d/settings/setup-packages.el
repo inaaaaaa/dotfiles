@@ -59,3 +59,6 @@
 ;; dimmer
 (require 'dimmer)
 (dimmer-mode)
+
+;; doom-themes
+(require 'doom-themes)

@@ -15,6 +15,7 @@
     csv-mode
     cyberpunk-theme
     dimmer
+    doom-themes
     f
     flycheck
     go-mode
@@ -56,6 +57,6 @@
 ;; init actions
 ;;
 
-(load-theme 'cyberpunk t)
+(load-theme 'doom-spacegrey t)
 (buffer-menu)
 (put 'upcase-region 'disabled nil)
