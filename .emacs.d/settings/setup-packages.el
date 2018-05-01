@@ -37,8 +37,10 @@
 ;; beacon
 (beacon-mode t)
 
-;; misc
+;; f
 (require 'f)
+
+;; s
 (require 's)
 
 ;; window-resizer
