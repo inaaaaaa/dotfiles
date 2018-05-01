@@ -30,6 +30,7 @@
     ruby-mode
     rust-mode
     s
+    undo-tree
     yaml-mode
     yasnippet))
 
