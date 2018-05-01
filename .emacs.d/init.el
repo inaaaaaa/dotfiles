@@ -14,6 +14,7 @@
     beacon
     csv-mode
     cyberpunk-theme
+    dimmer
     f
     flycheck
     go-mode
