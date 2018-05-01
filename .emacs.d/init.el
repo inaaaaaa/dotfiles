@@ -56,3 +56,4 @@
 
 (load-theme 'cyberpunk t)
 (buffer-menu)
+(put 'upcase-region 'disabled nil)
