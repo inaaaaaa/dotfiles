@@ -44,3 +44,7 @@
 ;; window-resizer
 (require 'window-resizer)
 (global-set-key (kbd "C-x w") 'window-resizer-do)
+
+;; yasnippet
+(require 'yasnippet)
+(yas-global-mode 1)
