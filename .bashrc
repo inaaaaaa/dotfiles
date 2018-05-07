@@ -1,4 +1,4 @@
-export PS1="\[\033[1;36m\][\t]:\w:$?\[\033[0m\]\n$ "
+export PS1="\[\033[1;36m\][\t]:\w:\$?\[\033[0m\]\n$ "
 export PATH=${HOME}/bin:${PATH}
 
 export HISTSIZE=100000
