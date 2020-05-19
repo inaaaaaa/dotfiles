@@ -6,10 +6,6 @@ export HISTFILESIZE=100000
 export HISTCONTROL=ignoredups
 export HISTTIMEFORMAT='%F %T  '
 
-alias cp='cp -i'
-alias mv='mv -i'
-alias rm='rm -i'
-alias t='tmux'
 alias g='git branch && git status --short'
 alias em='emacs'
 alias e='emacsclient --no-wait'
@@ -26,9 +22,3 @@ else
     alias la='ls -Fa --color'
     alias ll='ls -Fl --color'
 fi
-
-function cd() {
-    builtin cd $1 && ls
-}
-
-test -r ~/.bashrc.local && . ~/.bashrc.local
