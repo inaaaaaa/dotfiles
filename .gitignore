@@ -1,6 +1,6 @@
-.emacs.d/*
-!.emacs.d/custom.el
-!.emacs.d/init.el
-!.emacs.d/settings
-!.emacs.d/snippets
+emacs.d/*
+!emacs.d/custom.el
+!emacs.d/init.el
+!emacs.d/settings
+!emacs.d/snippets
 .DS_Store
