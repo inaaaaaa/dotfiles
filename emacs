@@ -9,6 +9,9 @@
 (global-set-key (kbd "M-l") 'linum-mode)
 (global-set-key (kbd "M-u") 'upcase-region)
 
+(put 'upcase-region 'disabled nil)
+(put 'downcase-region 'disabled nil)
+
 (setq indent-tabs-mode nil)
 (setq make-backup-files nil)
 (setq auto-save-default nil)
