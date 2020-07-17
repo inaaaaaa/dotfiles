@@ -25,6 +25,7 @@
 (column-number-mode t)
 
 (server-start)
+
 (global-linum-mode)
 (setq linum-format "%4d ")
 
