@@ -29,4 +29,5 @@
 (global-linum-mode)
 (setq linum-format "%4d ")
 
+(load-theme 'tango-dark)
 (buffer-menu)
