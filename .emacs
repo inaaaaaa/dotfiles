@@ -1,3 +1,10 @@
+(require 'package)
+(setq package-archives
+      '(("melpa" . "https://melpa.org/packages/")
+	("org" . "https://orgmode.org/elpa/")
+	("gnu" . "https://elpa.gnu.org/packages/")))
+(package-initialize)
+
 (global-set-key (kbd "C-h") 'delete-backward-char)
 (global-set-key (kbd "C-t") 'other-window)
 (global-set-key (kbd "C-u") (kbd "C-@ C-a C-w"))
