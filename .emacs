@@ -10,6 +10,7 @@
 (global-set-key (kbd "C-u") (kbd "C-@ C-a C-w"))
 (global-set-key (kbd "C-x C-b") 'buffer-menu)
 (global-set-key (kbd "M-d") 'downcase-region)
+(global-set-key (kbd "M-f") 'forward-word)
 (global-set-key (kbd "M-g") 'goto-line)
 (global-set-key (kbd "M-i") 'whitespace-mode)
 (global-set-key (kbd "M-j") 'eval-print-last-sexp)
